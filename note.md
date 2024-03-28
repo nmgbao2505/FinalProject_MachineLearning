@@ -8,3 +8,4 @@
 # Câu hỏi:
 
 - Tổ chức Đoàn TNCS Hồ Chí Minh Thành lập ngày nào?
+- Các tính chất cơ bản của đoàn?

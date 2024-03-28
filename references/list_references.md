@@ -1,2 +1,3 @@
 - MiAI_Langchain_RAG - https://github.com/thangnch/MiAI_Langchain_RAG/tree/main
 - Langchain Ask PDF (Tutorial) - https://github.com/alejandro-ao/langchain-ask-pdf/tree/main
+- Emoji: https://emojidb.org/file-upload-emojis
