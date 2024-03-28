@@ -5,3 +5,7 @@
 ## all-MiniLM-L6-v2-f16.gguf
 
 - https://huggingface.co/caliex/all-MiniLM-L6-v2-f16.gguf/tree/main
+
+## nguyenvulebinh/vi-mrc-base (API)
+
+- https://api-inference.huggingface.co/models/nguyenvulebinh/vi-mrc-base
