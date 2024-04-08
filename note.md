@@ -7,5 +7,22 @@
 
 # Câu hỏi:
 
-- Tổ chức Đoàn TNCS Hồ Chí Minh Thành lập ngày nào?
-- Các tính chất cơ bản của đoàn?
+## File `[DOCX]-*`
+
+- Tổ chức Đoàn TNCS Hồ Chí Minh thành lập vào ngày
+- Bài ca chính thức của Đoàn
+- Ý nghĩa của huy hiệu đoàn
+
+> Tốt
+
+## File `[TXT]-*`
+
+- Đảng Cộng sản Việt Nam ra đời
+
+> Tốt
+
+## File `[PDF]-*`
+
+- Thời điểm kết thúc chiến dịch Hồ Chí Minh
+
+> Không tốt lắm

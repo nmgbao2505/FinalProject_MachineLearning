@@ -2,4 +2,10 @@
 
 ## Demo
 
-![](./src/figures/demo.jpg)
+### Homepage
+
+![](./src/figures/homepage.jpg)
+
+### Chat with documents
+
+![](./src/figures/chat_docs.jpg)

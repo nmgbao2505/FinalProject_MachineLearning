@@ -8,4 +8,8 @@
 
 ## nguyenvulebinh/vi-mrc-base (API)
 
-- https://api-inference.huggingface.co/models/nguyenvulebinh/vi-mrc-base
+- https://huggingface.co/nguyenvulebinh/vi-mrc-base
+
+## ancs21/xlm-roberta-large-vi-qa
+
+- https://huggingface.co/ancs21/xlm-roberta-large-vi-qa
