@@ -50,12 +50,14 @@ def generate_story_from_scenario(scenario):
     hf_token = "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"
     llm = HuggingFaceHub(huggingfacehub_api_token=hf_token, repo_id=repo_id, verbose=False, model_kwargs={"temperature": 0.1, "max_new_tokens": 1500})
     story = generate_story(scenario, llm)
+    story = story.split("-")
+    story = story[-1].strip()
     return story
 
 
 def main():
-    st.set_page_config(page_title='Image to text and audio')
-    st.title("🔄 Chuyển ảnh thành văn bản")
+    st.set_page_config(page_title='Image to text')
+    st.title("🔄 Ảnh thành văn bản")
 
     uploaded_file = st.file_uploader('🖼 Upload hình ảnh của bạn ở đây...')
     
