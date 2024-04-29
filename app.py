@@ -7,7 +7,12 @@ import os
 import streamlit as st
 from datasets import load_dataset
 from transformers import MBartForConditionalGeneration, MBart50TokenizerFast
+from transformers import DetrImageProcessor, DetrForObjectDetection
+import torch
+from PIL import Image, ImageDraw
+import requests
 
+import re
 
 def translate_article_Eng_Viet(article_hi):
     model = MBartForConditionalGeneration.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")
@@ -50,14 +55,40 @@ def generate_story_from_scenario(scenario):
     hf_token = "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"
     llm = HuggingFaceHub(huggingfacehub_api_token=hf_token, repo_id=repo_id, verbose=False, model_kwargs={"temperature": 0.1, "max_new_tokens": 1500})
     story = generate_story(scenario, llm)
-    story = story.split("-")
-    story = story[-1].strip()
-    return story
+    first_dash_index = story.find('-')
+    processed_text = story[first_dash_index + 1:].strip()
+    processed_text = re.sub(r'-', '', processed_text)
+    sentences = processed_text.split('.')
+    if 'Người dùng' in sentences[-1]:
+        sentences = sentences[:-1]
+    res = '.'.join(sentences)
+    return res.strip()
+
+
+def detect_objects_and_draw_bounding_boxes(url):
+    image = Image.open(url)
+
+    processor = DetrImageProcessor.from_pretrained("facebook/detr-resnet-50", revision="no_timm")
+    model = DetrForObjectDetection.from_pretrained("facebook/detr-resnet-50", revision="no_timm")
+
+    inputs = processor(images=image, return_tensors="pt")
+    outputs = model(**inputs)
+
+    target_sizes = torch.tensor([image.size[::-1]])
+    results = processor.post_process_object_detection(outputs, target_sizes=target_sizes, threshold=0.9)[0]
+
+    draw = ImageDraw.Draw(image)
+    for score, label, box in zip(results["scores"], results["labels"], results["boxes"]):
+        box = [round(i, 2) for i in box.tolist()]
+        draw.rectangle(box, outline="green", width=2)
+        draw.text((box[0], box[1]), f"{model.config.id2label[label.item()]} {round(score.item(), 3)}", fill="red")
+
+    return image
 
 
 def main():
     st.set_page_config(page_title='Image to text')
-    st.title("🔄 Ảnh thành văn bản")
+    st.title("🔄 Xử lý hình ảnh")
 
     uploaded_file = st.file_uploader('🖼 Upload hình ảnh của bạn ở đây...')
     
@@ -73,12 +104,19 @@ def main():
         
         story = generate_story_from_scenario(scenario)
         
+        processed_image = detect_objects_and_draw_bounding_boxes(uploaded_file.name)
+        
         st.write('Đã xử lý xong ✅')
-        st.write(engtovie)
+        st.write(f'Nội dung: {engtovie}')
         with st.expander('📖 Tiếng Anh'):
             st.write(scenario)
         with st.expander('💬 Câu chuyện có thể phát triển từ mô tả' ):
             st.write(story)
+        
+        # Hiển thị ảnh đã xử lý
+        with st.expander('🔎 Phát hiện các đối tượng trong ảnh' ):
+            st.image(processed_image, caption='Ảnh với các đối tượng bên trong ảnh', use_column_width=True)
+
 
 if __name__ == '__main__':
     main()

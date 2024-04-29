@@ -4,3 +4,5 @@
 - LangChain là một thư viện Python được tạo ra để tạo ra các câu chuyện hoặc văn bản mới dựa trên các kịch bản cụ thể. Nó sử dụng các mô hình ngôn ngữ để dự đoán và tạo ra các đoạn văn bản mới dựa trên các kịch bản được cung cấp.
 - Sử dụng HuggingFace Hub để tải xuống một mô hình ngôn ngữ đã được đào tạo và sử dụng nó để tạo ra câu chuyện từ các kịch bản đã cho.
 - Sử dụng mô hình "Salesforce/blip-image-captioning-base" chuyển đổi hình ảnh thành văn bản.
+- DetrImageProcessor là một lớp trong transformers dùng để xử lý ảnh trước khi đưa vào mô hình DETR. Nó cung cấp các phương thức để chuyển đổi ảnh thành dạng mà mô hình DETR có thể chấp nhận, bao gồm việc chuẩn hóa ảnh và chuyển đổi ảnh thành tensor. 
+- DetrForObjectDetection là một lớp trong transformers dùng để tải và sử dụng mô hình DETR cho nhiệm vụ phát hiện đối tượng. Lớp này cung cấp các phương thức để tải mô hình DETR đã được huấn luyện từ thư viện Hugging Face và sử dụng nó để phát hiện các đối tượng trong ảnh. Nó cũng cung cấp các phương thức để thực hiện xử lý kết quả phát hiện, chẳng hạn như chuyển đổi đầu ra của mô hình thành đối tượng có thể đọc được dễ dàng hơn.
