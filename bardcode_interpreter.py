@@ -30,13 +30,10 @@ import io
 import os
 from os import path
 
-# The input limit of Bard is 4,000 character (As per the Bard API documentation)
-# But you can give more input upto 10,000 characters. so we are gonna stick to that.
 BARD_FILE_SIZE_LIMIT = 10000
 
 
 def init_session_state():
-  # Initialize the session state variables
     if "bard_coder" not in st.session_state:
         st.session_state.bard_coder = None
     
@@ -59,7 +56,6 @@ def init_session_state():
         st.session_state.file_char_count = 0
 
 def init_bard_coder_session(api_key=None, temperature=0.1, max_output_tokens=2048, mode='precise'):
-    # Initialize the bard coder session
     try:
         bard_coder = BardCoder(api_key=api_key, model="text-bison-001", temperature=temperature, max_output_tokens=max_output_tokens, mode=mode, guidelines=["exception_handling", "error_handling","code_only"])
     except Exception as e:
@@ -73,7 +69,6 @@ def make_code_interpreter_read_only(files=[],folders:str="libs"):
         logger.info(f"Making {filename} read-only")
         os.chmod(filename, S_IREAD|S_IRGRP|S_IROTH)
 
-    # Make all files in lib folder read-only
     logger.info(f"Making all files in {folders} folder read-only")
     folder = folders
     for filename in os.listdir(folder):
@@ -81,26 +76,14 @@ def make_code_interpreter_read_only(files=[],folders:str="libs"):
         os.chmod(filepath, S_IREAD|S_IRGRP|S_IROTH)
 
 def create_dirs_on_startup():
-    # Create the uploads directory if it does not exist
     if not os.path.exists("uploads"):
         os.makedirs("uploads")
     if not os.path.exists("codes"):
         os.makedirs("codes")
 
-# method to execute the bard coder process
 def auto_bard_execute(prompt, code_file='code.txt', code_choices='code_choice', expected_output=None, exec_type='single', rate_limiter_delay=5):
-    logger.info("Starting auto_bard_execute method")
     try:
-        # Additional prompt for class clarification.
-        # prompt += "\n" + f"Note: The Name the class should be {code_file} if Java language is requested"
-        logger.info("Adding additional prompts")
-
-        # Additional prompt for no input clarification.
-        prompt += "\n" + "Dont ask the input from user.If input values are provided in code just use them. otherwise, you can hardcode the input values in code."
-
-        # Generate the code from the prompt
-        logger.info("Generating code from prompt")
-        code = st.session_state.bard_coder.generate_code(prompt, 'python')  # Generate code using BardCoder
+        code = st.session_state.bard_coder.generate_code(prompt, 'python')  
         
         # print the code in output.
         if code:
@@ -114,78 +97,60 @@ def auto_bard_execute(prompt, code_file='code.txt', code_choices='code_choice', 
         return saved_file, False
 
     except Exception as exception:
-        # show_outputf the stack trace
         stack_trace = traceback.format_exc()
         st.info(str(exception))
         logger.error(f"Exception {exception} occurred while executing the code {stack_trace}")
 
 
-# method to execute the bard coder process
 def auto_bard_setup(prompt, code_file='code.txt', code_choices='code_choice', expected_output=None, exec_type='single', rate_limiter_delay=5):
-    logger.info("Starting auto_bard_setup method")
 
-    # Append the codes directory to filename
     code_file = path.join("codes", code_file)
-    test_cases_output = 0  # Test cases for output.
+    test_cases_output = 0 
 
-    # Start the bard coder process
-    logger.info("Starting bard coder process")
     saved_file, status = auto_bard_execute(prompt, code_file, code_choices, expected_output, exec_type)
     code_output = None
 
     if ~status:
         if code_output and code_output != None and code_output.__len__() > 0:
 
-            # Check for errors like 'error' or 'Error' check case sensitivity and add more error checks.
             if code_output is not None:
                 code_output = "".join(code_output)
             else:
                 code_output = ""
 
             if code_output:
-                logger.info("Checking for errors in code output")
                 while 'error' in code_output.lower() or 'exception' in code_output.lower():
                     logger.info(
                         "Error in executing code, trying to fix the code with error")
                     st.info(
                         "Error in executing code,Trying to fix the code with error")
 
-                    # Re-prompt on error.
                     code = st.session_state.bard_coder.get_code()
                     prompt = f"I got error while running the code {code_output}.\nPlease fix the code ``\n`{code}\n``` \nand try again.\nHere is error {code_output}\n\n" + \
                         "Note:The output should only be fixed code and nothing else. No explanation or anything else."
 
-                    # Start the bard coder process again.
                     logger.info("Starting bard coder process again")
                     code_output, saved_file, status = auto_bard_execute(prompt, code_file, code_choices, expected_output, exec_type)
-                    # Sleep for 5 seconds before re-prompting. Dont get Rate limited.
-                    logger.info("Sleeping for rate limiter delay")
                     time.sleep(rate_limiter_delay)
                     test_cases_output += 1
 
             st.code(code_output, language="python")
 
-            # Check for expected output.
             if code_output and expected_output and code_output.__len__() > 0:
 
-                # While expected output does not contain in code output.
-                logger.info("Checking for expected output in code output")
                 while expected_output not in code_output:
                     logger.info(
                         f"Expected output {expected_output} not found in code\nOutput: {code_output}")
                     st.info(
                         f"Expected output {expected_output} not found in code\nOutput: {code_output}")
 
-                    # Re-prompt on expected output not found.
                     code = st.session_state.bard_coder.get_code()
                     prompt = f"I got output {code_output}.\nPlease fix the code ``\n`{code}\n```  \nand try again.\nHere is expected output: {code_output}\n\n" + \
                         "Note:The output should only be fixed code and nothing else. No explanation or anything else."
 
-                    # start the bard coder process again.
                     logger.info("Starting bard coder process again")
                     code_output, saved_file, status = auto_bard_execute(prompt, code_file, code_choices, expected_output, exec_type)
 
-                    # Sleep for N seconds before re-prompting. Dont get Rate limited.
                     logger.info("Sleeping for rate limiter delay")
                     time.sleep(rate_limiter_delay)
                     test_cases_output += 1
@@ -194,7 +159,6 @@ def auto_bard_setup(prompt, code_file='code.txt', code_choices='code_choice', ex
                 st.info("Code has been fixed for expected output")
                 st.info(code_output)
 
-    # Print output and information.
     return code_output, saved_file, status
 
 def is_prompt_safe(prompt):
@@ -205,15 +169,11 @@ def is_prompt_safe(prompt):
     
     logger.info("Checking prompt for safety")
 
-    # Extra care for prompt input.
     prompt_list = [re.sub(r'[^\w\s]', '', re.sub(r'(\*\*|__)(.*?)(\*\*|__)', r'\2', re.sub(
         r'^\W+|\W+$', '', item))).strip() for item in re.split('\n| ', prompt.lower()) if item.strip() != '']
     prompt_list = [re.sub(r'\d+', '', i) for i in prompt_list]
     logger.info(f"Prompt list is {prompt_list}")
 
-    # Convert the code to lowercase and split it into a list of words
-
-    # Check if any harmful command is in the list of words
     for command in harmful_prompts:
         if command in prompt_list:
             logger.info(f"Prompt is not safe because of illegal command found '{command}'")
@@ -246,16 +206,12 @@ def is_code_safe(code):
     if st.session_state.bard_coder:
       logger.info("Checking code for safety")
 
-    # Combine both lists
     harmful_code_commands = harmful_commands_python + harmful_commands_cpp
 
-    # Tokenize the code
     tokens_list = tokenize_source_code(code)
 
-    # Initialize the output dictionary
     output_dict = []
 
-    # Check if any harmful command is in the list of words
     for command in harmful_code_commands:
         for token in tokens_list:
             if command == token:
@@ -270,37 +226,28 @@ def is_code_safe(code):
 def dsiplay_buttons(is_prompt_valid: bool):
     col1, _, _ = st.columns(3, gap='large')
 
-    with col1:  # use the first column
+    with col1:
         run_button = st.button("Tạo code", key="run-button", use_container_width=True,
-                               disabled=not is_prompt_valid)  # place the run button as a regular button
+                               disabled=not is_prompt_valid) 
 
     return run_button
 
-if __name__ == "__main__":
+def run():
     try:
-        logger.info("Starting the streamlit App")
-        # Create directories on startup
         create_dirs_on_startup()
         
-        # Make the code interpreter read-only
         file = __file__
         filenames = [file,file.replace("bardcode_interpreter", "bardcoder")]
-        #make_code_interpreter_read_only(filenames,"libs")
 
-        # Upload file data variables
         upload_prompt_data, upload_data, uploaded_file = None, None, None
 
-        # Initialize the session state variables
-        logger.info("Initializing the session state variables")
         init_session_state()
-        logger.info("Session state variables initialized")
 
         try:
             code_file = st.text_input("Nhập tên file muốn lưu:", value="")
             st.session_state.safe_system = True
             st.session_state.save_file = True
             
-            # Adding the upload file option
             uploaded_file = st.file_uploader("Chọn file")
             if uploaded_file is not None:
 
@@ -408,3 +355,6 @@ if __name__ == "__main__":
         stack_trace = traceback.format_exc()
         st.error("Error: " + str(exception))
         logger.error(f"Error: {exception}\n{stack_trace}")
+
+if __name__ == "__main__":
+    run()
