@@ -33,21 +33,42 @@ def run() -> None:
     # |                     HEADER SECTION                     |
     # +--------------------------------------------------------+
     with st.container():
-        st.subheader(":wave: Xin chào, tôi là Pratt")
+        wave_icon = \
+            f"""<p style="font-weight: bold; font-family: 'Poppins', sans-serif; 
+                    font-size: 50px; border-radius: 2%;">
+                        👋 
+            </p>"""
+        introdution = \
+            f"""<p style="font-weight: bold; font-family: 'Poppins', sans-serif;
+                    font-size: 50px; border-radius: 2%;
+                    background-image: linear-gradient(43deg, #5a83f1 0%, #9e71c5 46%, #d2646f 100%);
+                    -webkit-background-clip: text; color: transparent;
+                    margin-left: 10px;">
+                        Xin chào, tôi là Pratt!
+            </p>"""
+
+        # Wrap both strings inside a div with display: flex
+        combined_content = f'<div style="display: flex;">{wave_icon}{introdution}</div>'
+        # Use st.markdown to render HTML
+        st.markdown(combined_content, unsafe_allow_html=True)
+
         st.title("Một trợ lý ảo hỗ trợ bạn trong học tập và công việc hàng ngày")
+        st.divider()  # 👈 Draws a horizontal rule
 
     # +--------------------------------------------------------+
     # |                        WHAT I DO                       |
     # +--------------------------------------------------------+
     with st.container():
-        # Render a horizontal line
-        st.write("---")
+        # Render header line
+        st.write("#")
+        st.header("⚙️ Tôi có thể giúp gì cho bạn?", divider="violet")
+        st.write("#")
+
+        # Split the screen into two columns
         left_column, right_column = st.columns(2)
 
         # For left column
         with left_column:
-            st.header("⚙️ Tôi có thể giúp gì cho bạn?")
-            st.write("##")
             st.write(
                 """
                 Trên trang web này, tôi cung cấp một số chức năng hữu ích giúp cho việc học
@@ -77,9 +98,9 @@ def run() -> None:
     # |                         CONTACT                        |
     # +--------------------------------------------------------+
     with st.container():
-        st.write("---")
-        st.header("📬 Hãy liên lạc với tôi qua email!")
-        st.write("##")
+        st.write("#")
+        st.header("💌 Hãy liên lạc với tôi qua email!", divider="violet")
+        st.write("#")
 
         # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
         contact_form = """
@@ -97,6 +118,25 @@ def run() -> None:
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_column:
             st.empty()
+
+    # +--------------------------------------------------------+
+    # |                      GROUP MEMBER                      |
+    # +--------------------------------------------------------+
+    with st.container():
+        st.write("#")
+        st.header("🤝 Nhóm tác giả", divider="violet")
+        st.write("#")
+
+        st.subheader("Lớp: Nhập môn học máy - 21KHDL1 - HCMUS")
+        st.subheader("Nhóm: 8")
+        st.markdown("""
+        | Stt | Họ và tên | MSSV |
+        | :-: | --------: | :--- |
+        | 1 | Võ Duy Anh | 21127221 |
+        | 2 | Phạm Nguyễn Quốc Thanh | 21127428 |
+        | 3 | Nguyễn Mậu Gia Bảo | 21127583 |
+        | 4 | Vũ Minh Phát | 21127739 |
+        """)
 
 
 if __name__ == "__main__":
