@@ -2,15 +2,12 @@ from transformers import pipeline
 from langchain import PromptTemplate, LLMChain
 from langchain import HuggingFaceHub
 
-import requests
-import os
 import streamlit as st
 from datasets import load_dataset
 from transformers import MBartForConditionalGeneration, MBart50TokenizerFast
 from transformers import DetrImageProcessor, DetrForObjectDetection
 import torch
 from PIL import Image, ImageDraw
-import requests
 
 import re
 
@@ -88,7 +85,7 @@ def detect_objects_and_draw_bounding_boxes(url):
 
 def main():
     st.set_page_config(page_title='Image to text')
-    st.title("🔄 Xử lý hình ảnh")
+    st.title("🔄 Xử Lý Hình Ảnh và Tạo Câu Chuyện")
 
     uploaded_file = st.file_uploader('🖼 Upload hình ảnh của bạn ở đây...')
     
@@ -113,7 +110,6 @@ def main():
         with st.expander('💬 Câu chuyện có thể phát triển từ mô tả' ):
             st.write(story)
         
-        # Hiển thị ảnh đã xử lý
         with st.expander('🔎 Phát hiện các đối tượng trong ảnh' ):
             st.image(processed_image, caption='Ảnh với các đối tượng bên trong ảnh', use_column_width=True)
 
