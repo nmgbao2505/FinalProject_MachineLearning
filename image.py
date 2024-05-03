@@ -83,7 +83,7 @@ def detect_objects_and_draw_bounding_boxes(url):
     return image
 
 
-def main():
+def run():
     st.set_page_config(page_title='Image to text')
     st.title("🔄 Xử Lý Hình Ảnh và Tạo Câu Chuyện")
 
@@ -115,4 +115,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    run()
