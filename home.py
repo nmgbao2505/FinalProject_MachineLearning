@@ -38,7 +38,7 @@ def run() -> None:
                     font-size: 50px; border-radius: 2%;">
                         👋 
             </p>"""
-        introdution = \
+        introduction = \
             f"""<p style="font-weight: bold; font-family: 'Poppins', sans-serif;
                     font-size: 50px; border-radius: 2%;
                     background-image: linear-gradient(43deg, #5a83f1 0%, #9e71c5 46%, #d2646f 100%);
@@ -48,7 +48,7 @@ def run() -> None:
             </p>"""
 
         # Wrap both strings inside a div with display: flex
-        combined_content = f'<div style="display: flex;">{wave_icon}{introdution}</div>'
+        combined_content = f'<div style="display: flex;">{wave_icon}{introduction}</div>'
         # Use st.markdown to render HTML
         st.markdown(combined_content, unsafe_allow_html=True)
 
@@ -75,9 +75,22 @@ def run() -> None:
                 và làm việc của bạn trở nên dễ dàng hơn. Dưới đây là một số chức năng mà bạn có thể
                 sử dụng:
                 
-                - 💬 **Trò chuyện với dữ liệu**: Sau khi bạn đăng tải dữ liệu lên trang web, tôi sẽ 
-                giúp bạn trả lời các câu hỏi bằng cách tra cứu thông tin từ tài liệu đó.
+                - 💬 **Trò chuyện với dữ liệu**: Sau khi bạn đăng tải dữ liệu lên trang web, tôi sẽ giúp bạn trả lời các câu hỏi bằng
+                    cách tra cứu thông tin từ tài liệu đó. Hiện tại, tôi có thể hỗ trợ tra cứu thông tin tên các tập tin phổ biến như: PDF, DOCX, 
+                    TXT và MD. Bên cạnh việc đưa ra câu trả lời, tôi còn có thể cung cấp thông tin về vị trí xuất hiện
+                    của từ khóa trong tài liệu để giúp bạn dễ dàng kiểm tra lại thông tin.  
+                      
                 
+                - 🖼️ **Xử lý hình ảnh và tạo câu chuyện**: Sau khi đăng tải bức ảnh lên trang web, tôi sẽ giúp bạn tạo ra tiêu đề cho bức ảnh 
+                    (cả tiếng Việt và tiếng Anh). Bên cạnh đó, dựa vào tiêu đề, tôi cũng hỗ trợ bạn phát triển một câu chuyện nhỏ
+                    để mô tả rõ hơn về bức ảnh. Cuối cùng là tính năng phát hiện, nhận diện các đối tượng có trên bức ảnh.
+                    
+                
+                - 👨‍💻 **Trình tạo mã nguồn theo yêu cầu**: Với chức năng này, bạn có thể hỏi các vấn đề liên quan đến lập trình, trang web 
+                    sẽ phát sinh đoạn mã nguồn đáp ứng yêu cầu của bạn. Mã nguồn đa dạng ở các ngôn ngữ 
+                    như: c, c++, java, python, v.v. Ngoài ra, bạn có thể đăng tải file dữ liệu csv, trang web có thể hỗ trợ phát sinh 
+                    mã nguồn để phân tích, trực quan, thống kê, v.v. từ dữ liệu trong file tương ứng. Bạn có thể nhập tên file yêu cầu, sau khi hoàn thành, web sẽ tạo file tương ứng để
+                    lưu mã nguồn vừa phát sinh.
 
                 Nếu các tính năng trên có xuất hiện lỗi hoặc nếu bạn có bất kỳ yêu cầu nào khác, đừng ngừng ngại
                 liên hệ với tôi qua email.

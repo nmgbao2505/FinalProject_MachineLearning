@@ -2,6 +2,8 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import home
 import chat_documents
+import image
+import bardcode_interpreter
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 # Reference: https://docs.streamlit.io/develop/api-reference/configuration/st.set_page_config
@@ -29,13 +31,17 @@ st.set_page_config(
 TITLE_TO_FUNCTION = {
     "Trang chủ": home.run,
     "Trò chuyện với dữ liệu": chat_documents.run,
+    "Xử lý hình ảnh và tạo câu chuyện": image.run,
+    "Trình tạo mã nguồn theo yêu cầu": bardcode_interpreter.run,
 }
 
 # Mapping from title to icon
+# Resources: https://icons.getbootstrap.com/
 TITLE_TO_ICON = {
     "Trang chủ": "house-fill",
     "Trò chuyện với dữ liệu": "chat-square-text-fill",
-    # "Tin nhắn": "💬",
+    "Xử lý hình ảnh và tạo câu chuyện": "image-fill",
+    "Trình tạo mã nguồn theo yêu cầu": "file-earmark-code-fill",
 }
 
 

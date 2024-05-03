@@ -10,3 +10,14 @@ faiss-cpu
 openai
 PyPDF2
 streamlit
+bardapi
+pillow
+matplotlib
+pandas
+plotly
+requests
+keras
+scikit-learn
+tabulate
+librosa
+scipy
