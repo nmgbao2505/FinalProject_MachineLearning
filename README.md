@@ -21,7 +21,7 @@ Ví dụ:
   - Chụp hình demo cho chức năng
 - Trình bày kiến trúc của mô hình thực hiện chức năng đó:
   - Vẽ kiến trúc mô hình (dạng đơn giản trong slide)  
-    ![](./src/figures/Kiến%20trúc%20Model.jpg)
+    ![](./figures/Kiến%20trúc%20Model.jpg)
 
 ```
 # 1. Thông tin nhóm
@@ -47,8 +47,8 @@ Ví dụ:
 
 ### Homepage
 
-![](./src/figures/homepage.jpg)
+![](./figures/homepage.jpg)
 
 ### Chat with documents
 
-![](./src/figures/chat_docs.jpg)
+![](./figures/chat_docs.jpg)
