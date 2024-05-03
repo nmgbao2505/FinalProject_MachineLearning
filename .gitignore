@@ -1,0 +1,16 @@
+*.pyc
+*.pyo
+*.log
+*.json
+*.doc
+*.md
+.env
+*.DS_Store
+graph.png
+*.txt
+*.json
+*.csv
+/codes/*
+/response/*
+/uploads/*
+.log
