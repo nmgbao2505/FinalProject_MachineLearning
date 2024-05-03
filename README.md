@@ -5,16 +5,60 @@
     - Tên file chạy chức năng: app.py
 
 
+# Report
 
+## Giao diện và chức năng hoạt động
+![](./img/homepage.png)
 
+- Nhấn chọn Browse files để load hình ảnh bạn muốn xử lý
+- Sau khi hình ảnh đã được load lên sẽ có giao diện như sau:
+![](./img/1.png)
+- Nội dung tóm tắt của hình ảnh sẽ được hiển thị ngay bên dưới hình ảnh.
+- Đi cùng với đó là 3 mục bạn có thể chọn để xem bao gồm: Tiếng Anh, Câu chuyện có thể phát triển từ mô tả, Phát hiện các đối tượng trong ảnh.
+![](./img/2.png)
+- Với mục Tiếng Anh, bạn có thể xem mô tả của bức ảnh bằng tiếng Anh.
+- Với mục Câu chuyện có thể phát triển từ mô tả, bạn có thể xem 1 câu chuyện ngắn được phát triển từ đoạn mô tả bức ảnh để có thể hình dung tổng quát nội dung của bức ảnh.
+- Với mục Phát hiện các đối tượng trong ảnh, bạn có thể nhận biết được các đối tượng bên trong ảnh.
 
+## Kiến trúc của mô hình thực hiện chức năng
+- Image-to-Text Model (Salesforce/blip-image-captioning-base):
+    * Sử dụng để chuyển đổi hình ảnh thành văn bản mô tả.
+    * Được sử dụng trong hàm img2text(url).
+- MBart Model (facebook/mbart-large-50-many-to-many-mmt):
+    * Một mô hình ngôn ngữ mạng transformer dựa trên kiến trúc BART (Bidirectional and Auto-Regressive Transformers).
+    * Được sử dụng để dịch từ văn bản tiếng Anh sang tiếng Việt.
+    * Được sử dụng trong hàm translate_article_Eng_Viet(article_hi) và generate_story(scenario, llm).
+- Detr Model (facebook/detr-resnet-50):
+    * Một mô hình dùng cho phát hiện đối tượng trong hình ảnh. Sử dụng mô hình DETR (DEtection TRansformer).
+    * Được sử dụng để phát hiện đối tượng trong hình ảnh và vẽ bounding boxes và nhãn tương ứng lên ảnh.
+    * Được sử dụng trong hàm detect_objects_and_draw_bounding_boxes(url).
+- LangChain:
+    * Thư viện để tạo câu chuyện dựa trên các mẫu cố định và mô hình ngôn ngữ.
+    * Sử dụng để tạo câu chuyện dựa trên mô tả hình ảnh và mô tả văn bản đã dịch sang tiếng Việt.
+    * Được sử dụng trong hàm generate_story_from_scenario(scenario).
 
+## Kiến trúc mô hình:
 
-
-
-- MBart là một mô hình máy học dựa trên kiến trúc Transformer, được đào tạo để xử lý nhiều ngôn ngữ cùng một lúc. Nó được huấn luyện với một loạt các ngôn ngữ và có khả năng dịch một câu từ một ngôn ngữ nguồn sang một ngôn ngữ đích mà không cần thông tin về cặp ngôn ngữ cụ thể. Trong model đã sử dụng để dịch văn bản từ tiếng Anh sang tiếng Việt.
-- LangChain là một thư viện Python được tạo ra để tạo ra các câu chuyện hoặc văn bản mới dựa trên các kịch bản cụ thể. Nó sử dụng các mô hình ngôn ngữ để dự đoán và tạo ra các đoạn văn bản mới dựa trên các kịch bản được cung cấp.
-- Sử dụng HuggingFace Hub để tải xuống một mô hình ngôn ngữ đã được đào tạo và sử dụng nó để tạo ra câu chuyện từ các kịch bản đã cho.
-- Sử dụng mô hình "Salesforce/blip-image-captioning-base" chuyển đổi hình ảnh thành văn bản.
-- DetrImageProcessor là một lớp trong transformers dùng để xử lý ảnh trước khi đưa vào mô hình DETR. Nó cung cấp các phương thức để chuyển đổi ảnh thành dạng mà mô hình DETR có thể chấp nhận, bao gồm việc chuẩn hóa ảnh và chuyển đổi ảnh thành tensor. 
-- DetrForObjectDetection là một lớp trong transformers dùng để tải và sử dụng mô hình DETR cho nhiệm vụ phát hiện đối tượng. Lớp này cung cấp các phương thức để tải mô hình DETR đã được huấn luyện từ thư viện Hugging Face và sử dụng nó để phát hiện các đối tượng trong ảnh. Nó cũng cung cấp các phương thức để thực hiện xử lý kết quả phát hiện, chẳng hạn như chuyển đổi đầu ra của mô hình thành đối tượng có thể đọc được dễ dàng hơn.
+     +---------------------+
+     |    Image Upload     |
+     +---------------------+
+                 |
+        +--------v--------+
+        | Image-to-Text   |
+        +--------+--------+
+                 |
+        +--------v--------+
+        |   Translation   |
+        +--------+--------+
+                 |
+        +--------v--------+
+        |    LangChain    |
+        +--------+--------+
+                 |
+        +--------v--------+
+        |    DETR Model   |
+        +--------+--------+
+                 |
+        +--------v--------+
+        |     Streamlit    |
+        +------------------+
