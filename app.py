@@ -24,7 +24,7 @@ What do you think about {topic} ?. Give me your honest opinionn and do not sprea
 prompt = PromptTemplate(template=template, input_variables=["topic"])
 llm_chain = LLMChain(llm=llm, prompt=prompt)
 
-def main():
+def run():
     topic, grammar = st.tabs(['Topic Generation', 'Grammar Correction'])
     with topic:
         if "messages" not in st.session_state:
@@ -55,4 +55,4 @@ def main():
             st.write(corrected_text.text)
 
 if __name__ == "__main__":
-    main()
+    run()
