@@ -317,7 +317,7 @@ def run():
                          divider="violet")
 
             uploaded_file = st.file_uploader("Chọn file",
-                                             label_visibility="hidden",)
+                                             label_visibility="hidden", type="csv")
             if uploaded_file is not None:
 
                 # To read file as bytes:
