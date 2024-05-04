@@ -12,7 +12,7 @@
 ## Giao diện và chức năng hoạt động
 
 ### Tạo sinh văn bản
-![](./img/topic.png)
+![](./img/Topic.png)
 
 - Cho một chủ đề để mô hình tạo sinh
 ![](./img/Fermi.png)
