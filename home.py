@@ -86,10 +86,10 @@ def run() -> None:
                     để mô tả rõ hơn về bức ảnh. Cuối cùng là tính năng phát hiện, nhận diện các đối tượng có trên bức ảnh.
                     
                 
-                - 👨‍💻 **Trình tạo mã nguồn theo yêu cầu**: Với chức năng này, bạn có thể hỏi các vấn đề liên quan đến lập trình, trang web 
+                - 👨‍💻 **Trình tạo mã nguồn theo yêu cầu**: Với chức năng này, bạn có thể hỏi các vấn đề liên quan đến lập trình, tôi 
                     sẽ phát sinh đoạn mã nguồn đáp ứng yêu cầu của bạn. Mã nguồn đa dạng ở các ngôn ngữ 
-                    như: c, c++, java, python, v.v. Ngoài ra, bạn có thể đăng tải file dữ liệu csv, trang web có thể hỗ trợ phát sinh 
-                    mã nguồn để phân tích, trực quan, thống kê, v.v. từ dữ liệu trong file tương ứng. Bạn có thể nhập tên file yêu cầu, sau khi hoàn thành, web sẽ tạo file tương ứng để
+                    như: C, C++, Java, Python, v.v.. Ngoài ra, bạn có thể đăng tải file dữ liệu CSV, tôi có thể hỗ trợ phát sinh 
+                    mã nguồn để phân tích, trực quan, thống kê, v.v. từ dữ liệu trong file tương ứng. Bạn có thể nhập tên file yêu cầu, sau khi hoàn thành, tôi sẽ giúp bạn tạo file tương ứng để
                     lưu mã nguồn vừa phát sinh.
 
                 - ✏️ **Tạo sinh văn bản và sửa lỗi ngữ pháp tiếng Anh**: Với chức năng tạo sinh văn bản, bạn có thể nhập vào một chủ đề và tôi sẽ giúp 

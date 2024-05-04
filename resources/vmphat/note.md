@@ -26,3 +26,8 @@
 - Thời điểm kết thúc chiến dịch Hồ Chí Minh
 
 > Không tốt lắm
+
+
+---
+
+BERT: là 1 mô hình của Google
