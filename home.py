@@ -75,8 +75,8 @@ def run() -> None:
                 và làm việc của bạn trở nên dễ dàng hơn. Dưới đây là một số chức năng mà bạn có thể
                 sử dụng:
                 
-                - 💬 **Trò chuyện với dữ liệu**: Sau khi bạn đăng tải dữ liệu lên trang web, tôi sẽ giúp bạn trả lời các câu hỏi bằng
-                    cách tra cứu thông tin từ tài liệu đó. Hiện tại, tôi có thể hỗ trợ tra cứu thông tin tên các tập tin phổ biến như: PDF, DOCX, 
+                - 💬 **Trò chuyện với tài liệu**: Sau khi bạn đăng tải tài liệu lên trang web, tôi sẽ giúp bạn trả lời các câu hỏi bằng
+                    cách tra cứu thông tin từ tài liệu đó. Hiện tại, tôi có thể hỗ trợ tra cứu thông tin trên các tập tin phổ biến như: PDF, DOCX, 
                     TXT và MD. Bên cạnh việc đưa ra câu trả lời, tôi còn có thể cung cấp thông tin về vị trí xuất hiện
                     của từ khóa trong tài liệu để giúp bạn dễ dàng kiểm tra lại thông tin.  
                       

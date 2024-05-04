@@ -30,7 +30,7 @@ st.set_page_config(
 # Mapping from title to function
 TITLE_TO_FUNCTION = {
     "Trang chủ": home.run,
-    "Trò chuyện với dữ liệu": chat_documents.run,
+    "Trò chuyện với tài liệu": chat_documents.run,
     "Xử lý hình ảnh và tạo câu chuyện": image.run,
     "Trình tạo mã nguồn theo yêu cầu": bardcode_interpreter.run,
 }
@@ -39,7 +39,7 @@ TITLE_TO_FUNCTION = {
 # Resources: https://icons.getbootstrap.com/
 TITLE_TO_ICON = {
     "Trang chủ": "house-fill",
-    "Trò chuyện với dữ liệu": "chat-square-text-fill",
+    "Trò chuyện với tài liệu": "chat-square-text-fill",
     "Xử lý hình ảnh và tạo câu chuyện": "image-fill",
     "Trình tạo mã nguồn theo yêu cầu": "file-earmark-code-fill",
 }

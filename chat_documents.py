@@ -284,11 +284,11 @@ def run() -> None:
     print("Main call")
 
     # Set the title
-    render_title("Trò chuyện với dữ liệu của bạn")
+    render_title("Trò chuyện với tài liệu của bạn")
 
     # Step 1: Upload file PDF
     st.write("#")
-    st.header("📚 Đăng tải dữ liệu của bạn ở đây", divider="violet")
+    st.header("📚 Đăng tải tài liệu của bạn ở đây", divider="violet")
     uploaded_files = st.file_uploader(
         label=" ",
         type=["pdf", "docx", "txt", "md"],
@@ -316,7 +316,7 @@ def run() -> None:
 
         # Step 2: Ask questions
         st.write("#")
-        st.header("💬 Hỏi thông tin từ dữ liệu", divider="violet")
+        st.header("💬 Hỏi thông tin từ tài liệu", divider="violet")
 
         # Set up the chat form
         load_chat_form_css()
