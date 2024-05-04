@@ -1,5 +1,20 @@
 # FinalProject_MachineLearning
 
+## Cấu trúc Folder (root)
+
+### Các folder riêng của từng thành viên
+
+- Folder `./bash_src`, `./libs`, `./codes`, `./uploads`: của `duyanh`.
+- Folder `./resources/bao`: của `bao`.
+
+### Các folder dùng chung
+
+- Folder `./reports`: chứa file Markdown để viết report của mỗi thành viên
+  - Đặt tên: `report-[id].md`  
+    -> Ví dụ: `report-21127739.md`
+  - Tạo folder con để lưu ảnh demo cho chức năng: `./reports/figures/<tên chức năng>`  
+    -> Ví dụ: `./reports/figures/home` là folder chứa ảnh demo cho Homepage.
+
 ## Template cho từng chức năng
 
 - Tên chức năng: <...>
