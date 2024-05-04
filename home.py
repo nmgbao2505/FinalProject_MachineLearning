@@ -92,6 +92,10 @@ def run() -> None:
                     mã nguồn để phân tích, trực quan, thống kê, v.v. từ dữ liệu trong file tương ứng. Bạn có thể nhập tên file yêu cầu, sau khi hoàn thành, web sẽ tạo file tương ứng để
                     lưu mã nguồn vừa phát sinh.
 
+                - ✏️ **Tạo sinh văn bản và sửa lỗi ngữ pháp tiếng Anh**: Với chức năng tạo sinh văn bản, bạn có thể nhập vào một chủ đề và tôi sẽ giúp 
+                bạn tạo ra một văn bản liên quan đến chủ đề đó. Còn với chức năng sửa lỗi ngữ pháp, bạn có thể nhập vào một đoạn văn bản tiếng Anh 
+                và tôi sẽ giúp bạn sửa lỗi ngữ pháp trong văn bản đó.
+
                 Nếu các tính năng trên có xuất hiện lỗi hoặc nếu bạn có bất kỳ yêu cầu nào khác, đừng ngừng ngại
                 liên hệ với tôi qua email.
                 """

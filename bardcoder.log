@@ -1,0 +1,5 @@
+2024-05-04 21:55:08,265 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 21:55:08,266 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 21:55:44,008 [INFO] [happy_transformer.py:38] [__init__] - Using device: cpu
+2024-05-04 21:55:44,140 [INFO] [happy_transformer.py:347] [_load_pipeline] - Moving model to cpu
+2024-05-04 21:55:44,143 [INFO] [happy_transformer.py:351] [_load_pipeline] - Initializing a pipeline
