@@ -6,6 +6,7 @@
 
 - Folder `./bash_src`, `./libs`, `./codes`, `./uploads`: của `duyanh`.
 - Folder `./resources/bao`: của `bao`.
+- Folder `./resources/Thanh`: của `Thanh`.
 
 ### Các folder dùng chung
 
