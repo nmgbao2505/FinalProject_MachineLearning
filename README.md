@@ -4,7 +4,7 @@
     - Mô tả chức năng: 
 	    + Tạo sinh văn bản: Cho một chủ đề và mô hình sẽ cho ra 1 văn bản liên quan tới chủ đề đấy.
 	    + Sửa lỗi ngữ pháp: Cho một câu tiếng Anh sai ngữ pháp và mô hình sẽ sửa lỗi.
-    - Tên file chạy chức năng: app.py
+    - Tên file chạy chức năng: writing_correction.py
 
 
 # Report

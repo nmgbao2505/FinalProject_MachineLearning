@@ -25,7 +25,7 @@ prompt = PromptTemplate(template=template, input_variables=["topic"])
 llm_chain = LLMChain(llm=llm, prompt=prompt)
 
 def run():
-    topic, grammar = st.tabs(['Topic Generation', 'Grammar Correction'])
+    topic, grammar = st.tabs(['TẠO VĂN BẢN', 'SỬA NGỮ PHÁP'])
     with topic:
         if "messages" not in st.session_state:
             st.session_state.messages = []
@@ -33,7 +33,7 @@ def run():
         for message in st.session_state.messages:
             with st.chat_message(message['role']):
                 st.write(message['text'])
-        input_topic = st.chat_input("Type your topic here")
+        input_topic = st.chat_input("Nhập chủ đề của bạn vào đây")
         if input_topic:
             with st.chat_message("user"):
                 st.markdown(input_topic)
@@ -49,8 +49,8 @@ def run():
             st.session_state.messages.append({"role": "bot", "text": response})
 
     with grammar:
-        text = st.text_area("Enter your text here")
-        if st.button("Correct Grammar"):
+        text = st.text_area("Nhập văn bản cần sửa ngữ pháp vào đây")
+        if st.button("Sửa ngữ pháp"):
             corrected_text = gec.generate_text("grammar: " + text, args=args)
             st.write(corrected_text.text)
 
