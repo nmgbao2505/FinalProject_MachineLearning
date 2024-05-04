@@ -3,3 +3,44 @@
 2024-05-04 21:55:44,008 [INFO] [happy_transformer.py:38] [__init__] - Using device: cpu
 2024-05-04 21:55:44,140 [INFO] [happy_transformer.py:347] [_load_pipeline] - Moving model to cpu
 2024-05-04 21:55:44,143 [INFO] [happy_transformer.py:351] [_load_pipeline] - Initializing a pipeline
+2024-05-04 21:58:53,020 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 21:58:53,021 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 21:58:56,062 [INFO] [bardcode_interpreter.py:193] [is_prompt_safe] - Starting is_prompt_safe method
+2024-05-04 21:58:56,066 [INFO] [bardcode_interpreter.py:198] [is_prompt_safe] - Checking prompt for safety
+2024-05-04 21:58:56,067 [INFO] [bardcode_interpreter.py:203] [is_prompt_safe] - Prompt list is []
+2024-05-04 21:58:56,068 [INFO] [bardcode_interpreter.py:210] [is_prompt_safe] - Input Prompt is safe
+2024-05-04 21:58:56,071 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 21:58:56,072 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 21:59:12,260 [INFO] [bardcode_interpreter.py:193] [is_prompt_safe] - Starting is_prompt_safe method
+2024-05-04 21:59:12,262 [INFO] [bardcode_interpreter.py:198] [is_prompt_safe] - Checking prompt for safety
+2024-05-04 21:59:12,263 [INFO] [bardcode_interpreter.py:203] [is_prompt_safe] - Prompt list is []
+2024-05-04 21:59:12,265 [INFO] [bardcode_interpreter.py:210] [is_prompt_safe] - Input Prompt is safe
+2024-05-04 21:59:12,267 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 21:59:12,269 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 22:10:46,470 [INFO] [happy_transformer.py:38] [__init__] - Using device: cpu
+2024-05-04 22:17:02,476 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 22:17:02,477 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 22:17:04,492 [INFO] [bardcode_interpreter.py:193] [is_prompt_safe] - Starting is_prompt_safe method
+2024-05-04 22:17:04,494 [INFO] [bardcode_interpreter.py:198] [is_prompt_safe] - Checking prompt for safety
+2024-05-04 22:17:04,495 [INFO] [bardcode_interpreter.py:203] [is_prompt_safe] - Prompt list is []
+2024-05-04 22:17:04,496 [INFO] [bardcode_interpreter.py:210] [is_prompt_safe] - Input Prompt is safe
+2024-05-04 22:17:04,497 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 22:17:04,500 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 22:17:20,084 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 22:17:20,086 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 22:17:42,169 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 22:17:42,171 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 22:17:48,534 [INFO] [bardcode_interpreter.py:193] [is_prompt_safe] - Starting is_prompt_safe method
+2024-05-04 22:17:48,535 [INFO] [bardcode_interpreter.py:198] [is_prompt_safe] - Checking prompt for safety
+2024-05-04 22:17:48,536 [INFO] [bardcode_interpreter.py:203] [is_prompt_safe] - Prompt list is []
+2024-05-04 22:17:48,537 [INFO] [bardcode_interpreter.py:210] [is_prompt_safe] - Input Prompt is safe
+2024-05-04 22:17:48,539 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 22:17:48,541 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 22:19:33,817 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 22:19:33,819 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
+2024-05-04 22:19:35,548 [INFO] [bardcode_interpreter.py:193] [is_prompt_safe] - Starting is_prompt_safe method
+2024-05-04 22:19:35,549 [INFO] [bardcode_interpreter.py:198] [is_prompt_safe] - Checking prompt for safety
+2024-05-04 22:19:35,550 [INFO] [bardcode_interpreter.py:203] [is_prompt_safe] - Prompt list is []
+2024-05-04 22:19:35,552 [INFO] [bardcode_interpreter.py:210] [is_prompt_safe] - Input Prompt is safe
+2024-05-04 22:19:35,553 [INFO] [bardcoder_lib.py:94] [_configure_api] - API key provided from settings.
+2024-05-04 22:19:35,554 [INFO] [bardcoder_lib.py:96] [_configure_api] - Palm API configured successfully.
