@@ -527,7 +527,7 @@ Zephyr là một mô hình được fine-tuned từ mô hình Mistral. Đây là
 [4]: Langchain Ask PDF (Tutorial) - [github.com/alejandro-ao](https://github.com/alejandro-ao/langchain-ask-pdf/tree/main).  
 [5]: Kickstart your Custom Streamlit Chatbot (ft. CSS & Langchain) - [yt.com/andfanilo](https://www.youtube.com/watch?v=6fs80o7Xm4I).  
 [6]: XLM and XLM-RoBERTa - [scaler.com](https://www.scaler.com/topics/nlp/xlm-roberta/)  
-[7]: Hiểu hơn về BERT: Bước nhảy lớn của Google - [viblo.asia](https://viblo.asia/p/hieu-hon-ve-bert-buoc-nhay-lon-cua-google-eW65GANOZDO).
+[7]: Hiểu hơn về BERT: Bước nhảy lớn của Google - [viblo.asia](https://viblo.asia/p/hieu-hon-ve-bert-buoc-nhay-lon-cua-google-eW65GANOZDO).  
 [8]: XLM-RoBERTa large for QA on Vietnamese languages (also support various languages) - [huggingface.co/ancs21](https://huggingface.co/ancs21/xlm-roberta-large-vi-qa).  
 [9]: XLM-RoBERTa - [huggingface.co/docs](https://huggingface.co/docs/transformers/model_doc/xlm-roberta).  
 [10]: Khái Quát Về Trí Tuệ Nhân Tạo, Lịch Sử Hình Thành và Ứng Dụng - [viblo.asia](https://viblo.asia/p/tri-tue-nhan-tao-khai-quat-ve-tri-tue-nhan-tao-lich-su-hinh-thanh-va-ung-dung-bXP4WADDL7G).  
