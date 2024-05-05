@@ -521,13 +521,33 @@ Zephyr là một mô hình được fine-tuned từ mô hình Mistral. Đây là
 
 # 6. Tài liệu tham khảo
 
-[1]: Build a Website in only 12 minutes using Python & Streamlit - [youtube.com/@CodingIsFun](https://www.youtube.com/watch?v=VqgUkExPvLY).  
-[2]: Create Multi Pages websites using Streamlit | Python - [youtube.com/@beginnerscodezone](https://www.youtube.com/watch?v=GvRfFdymaFA&t=307s).  
+[1]: Build a Website in only 12 minutes using Python & Streamlit - [yt.com/CodingIsFun](https://www.youtube.com/watch?v=VqgUkExPvLY).  
+[2]: Create Multi Pages websites using Streamlit | Python - [yt.com/beginnerscodezone](https://www.youtube.com/watch?v=GvRfFdymaFA&t=307s).  
 [3]: MiAI_Langchain_RAG - [github.com/thangnch](https://github.com/thangnch/MiAI_Langchain_RAG/tree/main).  
 [4]: Langchain Ask PDF (Tutorial) - [github.com/alejandro-ao](https://github.com/alejandro-ao/langchain-ask-pdf/tree/main).  
-[5]: Kickstart your Custom Streamlit Chatbot (ft. CSS & Langchain) - [youtube.com/@andfanilo](https://www.youtube.com/watch?v=6fs80o7Xm4I).  
+[5]: Kickstart your Custom Streamlit Chatbot (ft. CSS & Langchain) - [yt.com/andfanilo](https://www.youtube.com/watch?v=6fs80o7Xm4I).  
 [6]: XLM and XLM-RoBERTa - [scaler.com](https://www.scaler.com/topics/nlp/xlm-roberta/)  
 [7]: Hiểu hơn về BERT: Bước nhảy lớn của Google - [viblo.asia](https://viblo.asia/p/hieu-hon-ve-bert-buoc-nhay-lon-cua-google-eW65GANOZDO).
 [8]: XLM-RoBERTa large for QA on Vietnamese languages (also support various languages) - [huggingface.co/ancs21](https://huggingface.co/ancs21/xlm-roberta-large-vi-qa).  
 [9]: XLM-RoBERTa - [huggingface.co/docs](https://huggingface.co/docs/transformers/model_doc/xlm-roberta).  
-[10]: Khái Quát Về Trí Tuệ Nhân Tạo, Lịch Sử Hình Thành và Ứng Dụng - [viblo.asia](https://viblo.asia/p/tri-tue-nhan-tao-khai-quat-ve-tri-tue-nhan-tao-lich-su-hinh-thanh-va-ung-dung-bXP4WADDL7G).
+[10]: Khái Quát Về Trí Tuệ Nhân Tạo, Lịch Sử Hình Thành và Ứng Dụng - [viblo.asia](https://viblo.asia/p/tri-tue-nhan-tao-khai-quat-ve-tri-tue-nhan-tao-lich-su-hinh-thanh-va-ung-dung-bXP4WADDL7G).  
+[11]: mBART-50 many to many multilingual machine translation - [huggingface.co](https://huggingface.co/facebook/mbart-large-50-many-to-many-mmt).  
+[12]: MBart and MBart-50 - [huggingface.co](https://huggingface.co/docs/transformers/model_doc/mbart).  
+[13]: Fine-tuning mBART to unseen languages - [medium.com/pablo_rf](https://medium.com/@pablo_rf/fine-tuning-mbart-to-unseen-languages-c2fd55388ac5).  
+[14]: How to create Image to Text AI application - [yt.com/rajkkapadia](https://www.youtube.com/watch?v=Jri_J19E1Ec).  
+[15]: How to Make Your Images Talk: The AI that Captions Any Image - [yt.com/PritishMishra](https://www.youtube.com/watch?v=aaP7JJZuvGs).  
+[16]: BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation - [huggingface.co](https:///Salesforce/blip-image-captioning-base).  
+[17]: How to Use Salesforce - Blip Image Captioning Model - [yt.com/fahdmirza](https://www.youtube.com/watch?v=Yfsg_7FCw3Q).  
+[18]: Falcon-7B-Instruct - [huggingface.co](https://huggingface.co/tiiuae/falcon-7b-instruct).  
+[19]: Falcon-7B-Instruct LLM with LangChain Tutorial - [yt.com/1littlecoder](https://www.youtube.com/watch?v=mAoNANPOsd0).  
+[20]: tiiuae-falcon-7b-instruct - [clarifai.com](https://clarifai.com/clarifai/LLM-OpenSource-Models-Training-Inference-Test/models/tiiuae-falcon-7b-instruct).
+[21]: DETR (End-to-End Object Detection) model with ResNet-50 backbone - [huggingface.co](https://huggingface.co/facebook/detr-resnet-50).  
+[22]: Review — DETR: End-to-End Object Detection with Transformers - [sh-tsang.medium.com](https://sh-tsang.medium.com/review-detr-end-to-end-object-detection-with-transformers-c64977be4b8e).  
+[23]: Object detection Using Detection Transformer (Detr) on custom dataset - [yt.com/CodeWithAarohi](https://www.youtube.com/watch?v=xuh37qziXnw).  
+[24]: Gemini-Coder - [github.com](https://github.com/haseeb-heaven/gemini-interpreter).  
+[25]: T5 Grammar Correction - [huggingface.co](https://huggingface.co/vennify/t5-base-grammar-correction).  
+[26]: Grammer Correction using T5-Transformer - [kaggle.com](https://www.kaggle.com/code/meetnagadia/grammer-correction-using-t5-transformer).  
+[27]: Understanding T5 Model : Text to Text Transfer Transformer Model - [towardsdatascience.com](https://towardsdatascience.com/understanding-t5-model-text-to-text-transfer-transformer-model-69ce4c165023).  
+[28]: Model Card for Zephyr 7B β - [huggingface.co](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta).  
+[29]: EnViT5 Translation - [huggingface.co](https://huggingface.co/VietAI/envit5-translation).  
+[30]: MTet: Multi-domain Translation for English-Vietnamese - [github.com/vietai](https://github.com/vietai/mTet).
