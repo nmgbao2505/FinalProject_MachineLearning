@@ -3,9 +3,8 @@
 ## TODO:
 
 - Các thành viên hoàn thành các mục còn thiếu trong "# 4. Mô tả chi tiết và minh họa cho từng chức năng":
-  - Bảo: `## 4.3. Xử lý hình ảnh và tạo câu chuyện`
-  - Thanh: `## 4.5. Tạo sinh văn bản và sửa lỗi ngữ pháp tiếng Anh`
-  - Phát: `# 5. Kết luận`
+  - Bảo: Đã cập nhật, bổ sung hình (vẽ) cho `### 4.3.2. Tóm tắt quy trình hoạt động của chức năng`
+  - Thanh: `## 4.5. Tạo sinh văn bản và sửa lỗi ngữ pháp tiếng Anh` (đã cập nhật)
 
 ## Cấu trúc Report
 
