@@ -540,7 +540,7 @@ Zephyr là một mô hình được fine-tuned từ mô hình Mistral. Đây là
 [17]: How to Use Salesforce - Blip Image Captioning Model - [yt.com/fahdmirza](https://www.youtube.com/watch?v=Yfsg_7FCw3Q).  
 [18]: Falcon-7B-Instruct - [huggingface.co](https://huggingface.co/tiiuae/falcon-7b-instruct).  
 [19]: Falcon-7B-Instruct LLM with LangChain Tutorial - [yt.com/1littlecoder](https://www.youtube.com/watch?v=mAoNANPOsd0).  
-[20]: tiiuae-falcon-7b-instruct - [clarifai.com](https://clarifai.com/clarifai/LLM-OpenSource-Models-Training-Inference-Test/models/tiiuae-falcon-7b-instruct).
+[20]: tiiuae-falcon-7b-instruct - [clarifai.com](https://clarifai.com/clarifai/LLM-OpenSource-Models-Training-Inference-Test/models/tiiuae-falcon-7b-instruct).  
 [21]: DETR (End-to-End Object Detection) model with ResNet-50 backbone - [huggingface.co](https://huggingface.co/facebook/detr-resnet-50).  
 [22]: Review — DETR: End-to-End Object Detection with Transformers - [sh-tsang.medium.com](https://sh-tsang.medium.com/review-detr-end-to-end-object-detection-with-transformers-c64977be4b8e).  
 [23]: Object detection Using Detection Transformer (Detr) on custom dataset - [yt.com/CodeWithAarohi](https://www.youtube.com/watch?v=xuh37qziXnw).  
