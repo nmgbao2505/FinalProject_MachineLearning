@@ -4,7 +4,6 @@
 
 - Các thành viên hoàn thành các mục còn thiếu trong "# 4. Mô tả chi tiết và minh họa cho từng chức năng":
   - Bảo: `## 4.3. Xử lý hình ảnh và tạo câu chuyện`
-  - Duy Anh: `## 4.4. Trình tạo mã nguồn theo yêu cầu` (đã cập nhật hình mới)
   - Thanh: `## 4.5. Tạo sinh văn bản và sửa lỗi ngữ pháp tiếng Anh`
   - Phát: `# 5. Kết luận`
 
